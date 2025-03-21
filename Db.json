@@ -1,0 +1,251 @@
+{
+  "utilisateurs": [
+    {
+      "id": "1",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "jean.dupont@example.com",
+      "cin": "A123456",
+      "role": "chef_de_departement",
+      "mot_de_passe": "hashed_password_1"
+    },
+    {
+      "id": "2",
+      "nom": "Martin",
+      "prenom": "Marie",
+      "email": "marie.martin@example.com",
+      "cin": "B654321",
+      "role": "encadrant",
+      "mot_de_passe": "hashed_password_2"
+    },
+    {
+      "id": "3",
+      "nom": "Dubois",
+      "prenom": "Pierre",
+      "email": "pierre.dubois@example.com",
+      "cin": "C987654",
+      "role": "jury",
+      "mot_de_passe": "hashed_password_3"
+    },
+    {
+      "id": "4",
+      "nom": "Leroy",
+      "prenom": "Alice",
+      "email": "alice.leroy@example.com",
+      "cne": "G123456789",
+      "date_naissance": "2000-05-15",
+      "role": "etudiant",
+      "mot_de_passe": "hashed_password_4"
+    },
+    {
+      "id": "5",
+      "nom": "Simon",
+      "prenom": "David",
+      "email": "david.simon@example.com",
+      "cne": "G987654321",
+      "date_naissance": "2001-02-20",
+      "role": "etudiant",
+      "mot_de_passe": "hashed_password_5"
+    },
+    {
+      "id": "86b1",
+      "nom": "asdf",
+      "prenom": "asd",
+      "email": "asdf@asdf",
+      "cin": "",
+      "cne": "asdf",
+      "date_naissance": "2025-03-14",
+      "role": "etudiant",
+      "class_id": 1
+    }
+  ],
+  "departements": [
+    {
+      "id": "1",
+      "nom": "Informatique",
+      "chef_de_departement_id": 1
+    },
+    {
+      "id": "2",
+      "nom": "Mathématiques",
+      "chef_de_departement_id": 2
+    }
+  ],
+  "classes": [
+    {
+      "id": "1",
+      "filiere": "Génie Logiciel",
+      "semestre": 6,
+      "annee_scolaire": 2023,
+      "departement_id": 1
+    },
+    {
+      "id": "2",
+      "filiere": "Data Science",
+      "semestre": 6,
+      "annee_scolaire": 2023,
+      "departement_id": 1
+    }
+  ],
+  "etudiants": [
+    {
+      "id": "4",
+      "class_id": 1
+    },
+    {
+      "id": "5",
+      "class_id": 2
+    }
+  ],
+  "sujets": [
+    {
+      "id": "1",
+      "titre": "Système de gestion de projet",
+      "theme": "Gestion de projet",
+      "description": "Développement d'un système de gestion de projet pour les étudiants.",
+      "class_id": 1
+    },
+    {
+      "id": "80f5",
+      "titre": "asdf",
+      "theme": "asdf",
+      "description": "asdfasdf",
+      "class_id": 2
+    },
+    {
+      "id": "4936",
+      "titre": "asdf",
+      "theme": "asdf",
+      "description": "asdf",
+      "class_id": 1
+    }
+  ],
+  "binomes": [
+    {
+      "id": "1",
+      "etudiant1_id": 4,
+      "etudiant2_id": 5,
+      "encadrant_id": 2,
+      "sujet_id": 1,
+      "class_id": 2
+    },
+    {
+      "id": "3472",
+      "etudiant1_id": 5,
+      "etudiant2_id": 4,
+      "encadrant_id": 2,
+      "sujet_id": "80f5",
+      "class_id": 1
+    },
+    {
+      "id": "6939",
+      "etudiant1_id": 5,
+      "etudiant2_id": 4,
+      "encadrant_id": 2,
+      "sujet_id": "1",
+      "class_id": 1
+    },
+    {
+      "id": "e1e3",
+      "etudiant1_id": "4",
+      "etudiant2_id": "4",
+      "encadrant_id": "2",
+      "sujet_id": "1",
+      "class_id": "2"
+    }
+  ],
+  "soutenances": [
+    {
+      "id": "1",
+      "date": "2023-12-15",
+      "heure": "10:00",
+      "salle": "A101",
+      "binome_id": 1,
+      "jury1_id": 1,
+      "jury2_id": 3
+    }
+  ],
+  "salles": [
+    {
+      "id": "1",
+      "nom": "Salle A101",
+      "capacite": 50,
+      "equipement": "Projecteur, Tableau blanc"
+    },
+    {
+      "id": "2",
+      "nom": "Salle B202",
+      "capacite": 30,
+      "equipement": "Projecteur, Tableau interactif"
+    },
+    {
+      "id": "3",
+      "nom": "Salle C303",
+      "capacite": 20,
+      "equipement": "Tableau blanc"
+    }
+  ],
+  "soutenance_notes": [
+    {
+      "id": "1",
+      "jury_id": 1,
+      "note": 16
+    },
+    {
+      "id": "2",
+      "jury_id": 3,
+      "note": 15
+    }
+  ],
+  "rapports": [
+    {
+      "id": "1",
+      "binome_id": 1,
+      "titre": "Rapport final - Système de gestion de projet",
+      "localisation_rapport": "/rapports/rapport1.pdf",
+      "note": 17,
+      "commentaire": "Excellent travail, bien structuré."
+    }
+  ],
+  "binome_requests": [
+    {
+      "id": "1",
+      "requester_id": 4,
+      "requested_id": 5,
+      "status": "accepted"
+    }
+  ],
+  "docs_for_review": [
+    {
+      "id": "1",
+      "binome_id": 1,
+      "localisation_doc": "/docs/doc1.pdf",
+      "commentaire": "Bonne première version, quelques corrections nécessaires."
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "receiver_id": 4,
+      "subject": "Demande de binôme acceptée",
+      "content": "Votre demande de binôme avec David Simon a été acceptée."
+    }
+  ],
+  "pourcentages": [
+    {
+      "id": "1",
+      "rapport_pourcentage": 40,
+      "soutenance_pourcentage": 50,
+      "encadrant_pourcentage": 10
+    }
+  ],
+  "note_finales": [
+    {
+      "id": "1",
+      "etudiant_id": 4,
+      "rapport_note": 17,
+      "soutenance_note": 15,
+      "encadrant_note": 16
+    }
+  ]
+}
